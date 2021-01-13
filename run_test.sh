@@ -42,11 +42,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if [ -z ${OA_LINK_DIR+x} ]
-then
-    echo "OA_LINK_DIR is unset"
-    exit 1
-fi
+#if [ -z ${OA_LINK_DIR+x} ]
+#then
+#    echo "OA_LINK_DIR is unset"
+#    exit 1
+#fi
 
 export BUILD_TYPE=${1:-Debug}
 echo "CMAKE_BULD_TYPE: ${BUILD_TYPE}"
