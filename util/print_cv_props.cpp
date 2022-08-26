@@ -17,9 +17,11 @@ limitations under the License.
 
 #include <iostream>
 
+#ifdef OPENACCESS_ENABLE
 #include <cbag/oa/database.h>
 #include <cbag/oa/read.h>
 #include <cbag/oa/util.h>
+#endif // OPENACCESS_ENABLE
 
 void print_cv_props_top(const char *lib_name, const char *cell_name,
                         const char *view_name = "symbol", const char *lib_file = "cds.lib") {

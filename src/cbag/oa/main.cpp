@@ -20,9 +20,12 @@ limitations under the License.
 #include <vector>
 
 #include <cbag/gdsii/read.h>
+
+#ifdef   OPENACCESS_ENABLE
 #include <cbag/oa/database.h>
 #include <cbag/oa/main.h>
 #include <cbag/oa/write_lib.h>
+#endif // OPENACCESS_ENABLE
 
 namespace cbagoa {
 
