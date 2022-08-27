@@ -55,6 +55,8 @@ limitations under the License.
 #include <cbag/oa/util.h>
 #include <cbag/oa/write.h>
 
+#ifndef  OPENACCESS_DISABLE
+
 namespace cbagoa {
 
 template <class Vector>
@@ -105,4 +107,5 @@ void implement_lay_list(const oa::oaNativeNS &ns_native, const oa::oaCdbaNS &ns,
 
 } // namespace cbagoa
 
+#endif // OPENACCESS_DISABLE
 #endif

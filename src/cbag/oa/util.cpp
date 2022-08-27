@@ -45,10 +45,11 @@ limitations under the License.
 */
 
 #include <cbag/logging/logging.h>
+#include <cbag/oa/util.h>
 
+#ifndef  OPENACCESS_DISABLE
 #include <oa/oaDesignDB.h>
 
-#include <cbag/oa/util.h>
 
 namespace cbagoa {
 
@@ -157,3 +158,4 @@ oa::oaLib *open_library_read(const oa::oaNativeNS &ns, const std::string &lib_na
 }
 
 } // namespace cbagoa
+#endif // OPENACCESS_DISABLE

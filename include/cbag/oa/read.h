@@ -50,6 +50,7 @@ limitations under the License.
 #include <string>
 #include <unordered_set>
 
+#ifndef  OPENACCESS_DISABLE
 #include <oa/oaDesignDB.h>
 
 // forward declare structures to reduce dependencies
@@ -75,5 +76,6 @@ void print_cv_props(const oa::oaNativeNS &ns_native, const oa::oaCdbaNS &ns, spd
                     const std::string &view_name);
 
 } // namespace cbagoa
+#endif // OPENACCESS_DISABLE
 
 #endif // CBAGOA_READ_OA_H

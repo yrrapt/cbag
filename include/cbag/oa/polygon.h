@@ -50,6 +50,7 @@ limitations under the License.
 #include <cbag/polygon/point_concept.h>
 #include <cbag/polygon/tag.h>
 
+#ifndef  OPENACCESS_DISABLE
 #include <oa/oaDesignDB.h>
 
 #if __has_include(<cbag/oa/color.h>)
@@ -154,5 +155,6 @@ template <> struct polygon_traits<cbagoa::oa_polygon> {
 
 } // namespace polygon
 } // namespace cbag
+#endif // OPENACCESS_DISABLE
 
 #endif

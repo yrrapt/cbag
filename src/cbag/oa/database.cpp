@@ -65,6 +65,8 @@ limitations under the License.
 #include <cbag/oa/write.h>
 #include <cbag/oa/write_lib.h>
 
+#ifndef  OPENACCESS_DISABLE
+
 namespace cbagoa {
 
 using oa_lay_purp_t = std::pair<oa::oaLayerNum, oa::oaPurposeNum>;
@@ -344,3 +346,4 @@ void database::write_tech_info_file(const std::string &fname, const std::string 
 }
 
 } // namespace cbagoa
+#endif // OPENACCESS_DISABLE

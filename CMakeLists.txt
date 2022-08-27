@@ -202,8 +202,7 @@ set(SRC_FILES_LIB_CBAG_OA
   ${CMAKE_CURRENT_SOURCE_DIR}/src/cbag/oa/write.cpp
   )
 
-
-if(DEFINED ENV{OA_LINK_DIR})
+if(DEFINED ENV{OA_LINK_DIR} AND (NOT OPENACCESS_DISABLE))
 message("OA include directory: " $ENV{OA_INCLUDE_DIR})
 message("OA link directory: " $ENV{OA_LINK_DIR})
 

@@ -71,6 +71,8 @@ limitations under the License.
 #include <cbag/oa/util.h>
 #include <cbag/oa/write.h>
 
+#ifndef  OPENACCESS_DISABLE
+
 namespace cbagoa {
 
 // TODO: find ways to not hard code these values
@@ -946,3 +948,5 @@ void write_lay_cellview(const oa::oaNativeNS &ns_native, const oa::oaCdbaNS &ns,
 } // namespace cbagoa
 
 } // namespace cbagoa
+
+#endif // OPENACCESS_DISABLE

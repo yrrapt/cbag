@@ -46,9 +46,9 @@ limitations under the License.
 
 #include <iostream>
 
-#ifdef OPENACCESS_ENABLE
+#ifdef OPENACCESS_DISABLE
 #include <cbag/oa/database.h>
-#endif // OPENACCESS_ENABLE
+#endif // OPENACCESS_DISABLE
 
 void write_tech_info_file(const char *fname, const char *tech_lib, const char *lib_file = nullptr,
                           const char *pin_purpose = "pin", const char *label_purpose = "pin") {

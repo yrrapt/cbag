@@ -55,6 +55,7 @@ limitations under the License.
 #include <cbag/schematic/cellview.h>
 #include <cbag/schematic/instance.h>
 
+#ifndef  OPENACCESS_DISABLE
 #include <cbag/oa/read.h>
 #include <cbag/oa/util.h>
 
@@ -809,3 +810,4 @@ void print_cv_props(const oa::oaNativeNS &ns_native, const oa::oaCdbaNS &ns, spd
 }
 
 } // namespace cbagoa
+#endif // OPENACCESS_DISABLE

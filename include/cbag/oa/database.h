@@ -52,8 +52,8 @@ limitations under the License.
 #include <unordered_set>
 #include <vector>
 
+#ifndef  OPENACCESS_DISABLE
 #include <oa/oaDesignDB.h>
-
 #include <cbag/oa/typedef.h>
 
 // forward declare structures to reduce dependencies
@@ -141,5 +141,6 @@ class database {
 };
 
 } // namespace cbagoa
+#endif // OPENACCESS_DISABLE
 
 #endif // CBAGOA_DATABASE_H

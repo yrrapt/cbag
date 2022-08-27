@@ -50,9 +50,11 @@ limitations under the License.
 #include <cstdint>
 #include <string>
 
+#include <cbag/common/typedefs.h>
+
+#ifndef  OPENACCESS_DISABLE
 #include <oa/oaDesignDB.h>
 
-#include <cbag/common/typedefs.h>
 
 namespace spdlog {
 class logger;
@@ -75,5 +77,6 @@ void handle_oa_exceptions(spdlog::logger &logger);
 oa::oaLib *open_library_read(const oa::oaNativeNS &ns, const std::string &lib_name);
 
 } // namespace cbagoa
+#endif // OPENACCESS_DISABLE
 
 #endif

@@ -49,9 +49,10 @@ limitations under the License.
 
 #include <unordered_map>
 
-#include <oa/oaDesignDB.h>
-
 #include <cbag/oa/typedef.h>
+
+#ifndef  OPENACCESS_DISABLE
+#include <oa/oaDesignDB.h>
 
 // forward declare structures to reduce dependencies
 namespace spdlog {
@@ -75,4 +76,5 @@ void write_lay_cellview(const oa::oaNativeNS &ns_native, const oa::oaCdbaNS &ns,
 
 } // namespace cbagoa
 
+#endif // OPENACCESS_DISABLE
 #endif // CBAGOA_WRITE_OA_H

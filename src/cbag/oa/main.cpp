@@ -21,11 +21,11 @@ limitations under the License.
 
 #include <cbag/gdsii/read.h>
 
-#ifdef   OPENACCESS_ENABLE
 #include <cbag/oa/database.h>
 #include <cbag/oa/main.h>
 #include <cbag/oa/write_lib.h>
-#endif // OPENACCESS_ENABLE
+
+#ifndef  OPENACCESS_DISABLE
 
 namespace cbagoa {
 
@@ -47,3 +47,4 @@ void gds_to_oa(const database &db, const std::string &gds_fname, const std::stri
 }
 
 } // namespace cbagoa
+#endif // OPENACCESS_DISABLE

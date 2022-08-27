@@ -45,10 +45,11 @@ limitations under the License.
 */
 
 #include <cbag/schematic/cellview.h>
+#include <cbag/util/io.h>
 
+#ifndef  OPENACCESS_DISABLE
 #include <cbag/oa/read.h>
 #include <cbag/oa/read_lib.h>
-#include <cbag/util/io.h>
 
 namespace cbagoa {
 
@@ -93,3 +94,4 @@ cbag::sch::cellview cell_to_yaml(const oa::oaNativeNS &ns_native, const oa::oaCd
 }
 
 } // namespace cbagoa
+#endif // OPENACCESS_DISABLE

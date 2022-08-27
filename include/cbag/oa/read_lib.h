@@ -51,13 +51,14 @@ limitations under the License.
 
 #include <fmt/core.h>
 
-#include <oa/oaDesignDB.h>
-
 #include <cbag/schematic/cellview_fwd.h>
 #include <cbag/schematic/instance.h>
 
 #include <cbag/oa/typedef.h>
 #include <cbag/oa/util.h>
+
+#ifndef  OPENACCESS_DISABLE
+#include <oa/oaDesignDB.h>
 
 namespace cbagoa {
 
@@ -171,5 +172,6 @@ void read_library(const oa::oaNativeNS &ns_native, const oa::oaCdbaNS &ns, spdlo
 }
 
 } // namespace cbagoa
+#endif // OPENACCESS_DISABLE
 
 #endif
