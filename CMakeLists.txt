@@ -261,5 +261,10 @@ target_link_libraries(cbag
 
 endif()
 
+target_compile_definitions(cbag 
+PUBLIC
+    SPDLOG_COMPILED_LIB
+    SPDLOG_FMT_EXTERNAL)
+
 # add utility binaries
 add_subdirectory(util EXCLUDE_FROM_ALL)

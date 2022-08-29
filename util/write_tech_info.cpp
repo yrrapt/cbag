@@ -46,9 +46,7 @@ limitations under the License.
 
 #include <iostream>
 
-#ifdef OPENACCESS_DISABLE
 #include <cbag/oa/database.h>
-#endif // OPENACCESS_DISABLE
 
 void write_tech_info_file(const char *fname, const char *tech_lib, const char *lib_file = nullptr,
                           const char *pin_purpose = "pin", const char *label_purpose = "pin") {
@@ -57,8 +55,10 @@ void write_tech_info_file(const char *fname, const char *tech_lib, const char *l
         lib_str = lib_file;
     }
 
+    #ifndef OPENACCESS_DISABLE
     cbagoa::database db(lib_str);
     db.write_tech_info_file(fname, tech_lib, pin_purpose, label_purpose);
+    #endif // OPENACCESS_DISABLE
 }
 
 int main(int argc, char *argv[]) {

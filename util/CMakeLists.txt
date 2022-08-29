@@ -51,6 +51,7 @@ add_executable(write_tech_info
 target_link_libraries(write_tech_info
   PUBLIC
   cbag
+  fmt
   )
 
 add_executable(write_cv_yaml
@@ -61,6 +62,7 @@ add_executable(write_cv_yaml
 target_link_libraries(write_cv_yaml
   PUBLIC
   cbag
+  fmt
   )
 
 add_executable(print_cv_props
@@ -71,6 +73,7 @@ add_executable(print_cv_props
 target_link_libraries(print_cv_props
   PUBLIC
   cbag
+  fmt
   )
 
 add_executable(print_gds
@@ -81,6 +84,7 @@ add_executable(print_gds
 target_link_libraries(print_gds
   PUBLIC
   cbag
+  fmt
   )
 
 add_executable(write_gds_rects
@@ -91,6 +95,7 @@ add_executable(write_gds_rects
 target_link_libraries(write_gds_rects
   PUBLIC
   cbag
+  fmt
   )
 
 

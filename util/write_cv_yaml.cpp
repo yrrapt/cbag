@@ -49,12 +49,10 @@ limitations under the License.
 
 #include <fmt/core.h>
 
-#ifdef OPENACCESS_DISABLE
 #include <cbag/logging/logging.h>
 #include <cbag/oa/database.h>
 #include <cbag/oa/read.h>
 #include <cbag/schematic/cellview.h>
-#endif // OPENACCESS_DISABLE
 
 void write_cv_yaml(const char *lib_name, const char *cell_name, const char *view_name = "symbol",
                    const char *output = nullptr, const char *lib_file = "cds.lib") {
@@ -64,10 +62,12 @@ void write_cv_yaml(const char *lib_name, const char *cell_name, const char *view
     else
         out_fname = output;
 
+    #ifndef OPENACCESS_DISABLE
     cbagoa::database db(lib_file);
     auto cv = db.read_sch_cellview(lib_name, cell_name, view_name);
 
     cv.to_file(out_fname);
+    #endif // OPENACCESS_DISABLE
 }
 
 int main(int argc, char *argv[]) {
